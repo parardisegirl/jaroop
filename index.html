@@ -1,0 +1,100 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Form </title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    
+    <style>
+        .form-group{
+            width: 200px;
+            margin-left: 105px;
+            
+        }
+        
+        #group{
+            background-color: lightgray;
+            width: 400px;
+            padding-bottom: 10px;
+            margin-left: 100px;
+            margin-bottom: 15px;
+            margin-top: 70px;
+        }
+        
+        .btn{
+            background-color: dodgerblue;
+            margin-left: 175px;
+            margin-top: 20px;
+        }
+        
+        #textarea1{
+            margin-left: 250px;
+            margin-top: -225px;
+            
+        }
+        #textarea2{
+            margin-left: 800px;
+            margin-top: -230px;
+        }
+        
+        #errorMessage, #errorMessage2{
+            color: red;
+            margin-left: 105px;
+            margin-top: -10px;
+            
+        }
+        
+        .modal-content{
+            width: 50px;
+        }
+    </style>
+    
+    <body>
+    
+    <form method="get" action="index.html" onsubmit="return addTerm();"> 
+        
+         <div id="group">
+            <div class="form-group">
+              <label for="usr">Term:</label>
+              <input id="inputText" type="text" class="form-control" id="usr"  maxlength="50">
+            </div>
+
+            <div id="errorMessage"></div>
+
+            <div class="form-group">
+              <label for="posneg">Type:</label>
+              <select name="posneg" class="form-control" id="posneg">
+                <option value=""> Choose a Type:</option>
+                <option>Positive</option>
+                <option>Negative</option>
+              </select>
+            </div>
+             
+            <div id="errorMessage2"></div>
+ 
+             
+          </div>
+
+            <button id="addterm" onclick="addTerm()" class="btn" type="button" class="btn btn-primary btn-md">Add Term</button>
+
+        
+        
+            <textarea id="textarea1" rows="10" cols="30">
+            </textarea>
+        
+            
+            <textarea id="textarea2" rows="10" cols="30">
+            </textarea>
+    
+        </form>
+
+        
+    </body>
+     
+    
+</html>
